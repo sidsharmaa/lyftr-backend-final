@@ -1,0 +1,21 @@
+services:
+  api:
+    build: .
+    image: lyftr-api
+    container_name: lyftr-backend
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./data:/data
+    env_file:
+      - .env
+    environment:
+      - DATABASE_URL=sqlite:////data/app.db
+      - LOG_LEVEL=INFO
+    restart: unless-stopped
+    healthcheck:
+      # This attempts to open the URL; if it fails (connection refused or 500), script exits with error.
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/health/live')"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
