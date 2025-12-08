@@ -1,4 +1,4 @@
-# Lyftr AI Backend Assignment
+# Lyftr AI Backend
 
 ![Python](https://img.shields.io/badge/Python-3.11-blue?style=flat-square)
 ![FastAPI](https://img.shields.io/badge/FastAPI-0.109-009688?style=flat-square)
