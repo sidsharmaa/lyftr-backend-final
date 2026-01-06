@@ -147,7 +147,5 @@ lyftr-assignment/
       - **ChatGPT**: Used for validating Docker multi-stage build best practices and generating edge-case test scenarios for HMAC verification.
 
 -----
-
-*Built for the Lyftr AI Backend Assignment.*
-
-```
+Built as a POC for CyberSec for my profile
+-----
